@@ -12,3 +12,17 @@ C:\Users\Paulo\source\repos\aspnet-core-registration-login-api-master\obj\Debug\
 C:\Users\Paulo\source\repos\aspnet-core-registration-login-api-master\obj\Debug\netcoreapp2.2\WebApi.dll
 C:\Users\Paulo\source\repos\aspnet-core-registration-login-api-master\obj\Debug\netcoreapp2.2\WebApi.pdb
 C:\Users\Paulo\source\repos\aspnet-core-registration-login-api-master\obj\Debug\netcoreapp2.2\WebApi.csprojAssemblyReference.cache
+C:\Users\Paulo\source\repos\TCC-Back\bin\Debug\netcoreapp2.2\WebApi.deps.json
+C:\Users\Paulo\source\repos\TCC-Back\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.json
+C:\Users\Paulo\source\repos\TCC-Back\bin\Debug\netcoreapp2.2\WebApi.runtimeconfig.dev.json
+C:\Users\Paulo\source\repos\TCC-Back\bin\Debug\netcoreapp2.2\WebApi.dll
+C:\Users\Paulo\source\repos\TCC-Back\bin\Debug\netcoreapp2.2\WebApi.pdb
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.csprojAssemblyReference.cache
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cache
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.RazorAssemblyInfo.cs
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfoInputs.cache
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.AssemblyInfo.cs
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.dll
+C:\Users\Paulo\source\repos\TCC-Back\obj\Debug\netcoreapp2.2\WebApi.pdb

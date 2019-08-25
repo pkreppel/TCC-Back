@@ -40,7 +40,7 @@ namespace WebApi.Controllers
                 localTipoRisco = tiposRisco.Where(i => p.TipoRiscoId == i.TipoRiscoId).FirstOrDefault().LocalTipoRisco,
                 dataCadastro = p.DataCadastro.ToString("dd/M/yyyy hh:mm:ss", CultureInfo.InvariantCulture)
 
-            });
+            }).OrderBy(p=> p.criticidade);
             return Ok(riscosReturn);
         }
 

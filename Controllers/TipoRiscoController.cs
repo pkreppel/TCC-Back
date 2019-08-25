@@ -35,7 +35,7 @@ namespace WebApi.Controllers
                 criticidade = p.Criticidade,
                 localTipoRisco = p.LocalTipoRisco,
                 editDelete =  _context.Risco.Where(i => i.TipoRiscoId == p.TipoRiscoId ).Count() == 0
-            });
+            }).OrderBy(p=> p.nomeTipoRisco);
             return Ok(tiposRiscoReturn);
         }
 
