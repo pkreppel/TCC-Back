@@ -2,16 +2,16 @@
 create TABLE TipoRisco(
 	TipoRiscoID int identity,
 	NomeTipoRisco varchar(max) not null,
-	Criticidade varchar(max) not null,
+	Criticidade int not null,
 	LocalTipoRisco varchar(max) not null,
 	constraint PK_TIPORISCO primary key (TipoRiscoID)
 )
 insert into TipoRisco(NomeTipoRisco, Criticidade, LocalTipoRisco)
-values('Tipo Risco 1', 'Criticidade 1', 'Local 1' )
+values('Tipo Risco 1', 1, 'Local 1' )
 insert into TipoRisco(NomeTipoRisco, Criticidade, LocalTipoRisco)
-values('Tipo Risco 2', 'Criticidade 2', 'Local 2' )
+values('Tipo Risco 2', 1, 'Local 2' )
 insert into TipoRisco(NomeTipoRisco, Criticidade, LocalTipoRisco)
-values('Tipo Risco 3', 'Criticidade 3', 'Local 3' )
+values('Tipo Risco 3', 1, 'Local 3' )
 
 create TABLE Risco(
 	RiscoID int identity,

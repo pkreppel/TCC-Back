@@ -41,7 +41,7 @@ namespace WebApi.Controllers
             var user = _userService.Authenticate(userDto.Username, userDto.Password);
 
             if (user == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
+                return BadRequest(new { message = "Usuário ou senha inválidos." });
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);

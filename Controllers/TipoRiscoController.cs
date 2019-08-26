@@ -28,11 +28,13 @@ namespace WebApi.Controllers
         public async Task<ActionResult<IEnumerable<TipoRisco>>> GetTiposRisco()
         {
             var tiposRisco = await _context.TipoRisco.ToListAsync();
+            var listaCriticidade = new Criticidade().ListaCriticidade();
             var tiposRiscoReturn = tiposRisco.Select(p => new
             {
                 tipoRiscoID = p.TipoRiscoId,
                 nomeTipoRisco = p.NomeTipoRisco,
-                criticidade = p.Criticidade,
+                criticidadeID = p.Criticidade,
+                critidadeNome = listaCriticidade.Where(i=> i.CriticidadeID == p.Criticidade).FirstOrDefault().TituloCriticidade,
                 localTipoRisco = p.LocalTipoRisco,
                 editDelete =  _context.Risco.Where(i => i.TipoRiscoId == p.TipoRiscoId ).Count() == 0
             }).OrderBy(p=> p.nomeTipoRisco);

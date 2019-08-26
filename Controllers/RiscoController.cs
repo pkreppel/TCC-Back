@@ -30,19 +30,23 @@ namespace WebApi.Controllers
         {
             var riscos = await _context.Risco.ToListAsync();
             var tiposRisco = await _context.TipoRisco.ToListAsync();
+            var criticidade = new Criticidade();
+            
             var riscosReturn = riscos.Select(p => new
             {
                 riscoID = p.RiscoId,
                 descricaoRisco = p.DescricaoRisco,
                 tipoRiscoID = p.TipoRiscoId,
                 nomeTipoRisco = tiposRisco.Where(i => p.TipoRiscoId == i.TipoRiscoId).FirstOrDefault().NomeTipoRisco,
-                criticidade = tiposRisco.Where(i => p.TipoRiscoId == i.TipoRiscoId).FirstOrDefault().Criticidade,
+                criticidade = criticidade.getTituloCriticidade(tiposRisco.Where(i => p.TipoRiscoId == i.TipoRiscoId).FirstOrDefault().Criticidade),
                 localTipoRisco = tiposRisco.Where(i => p.TipoRiscoId == i.TipoRiscoId).FirstOrDefault().LocalTipoRisco,
                 dataCadastro = p.DataCadastro.ToString("dd/M/yyyy hh:mm:ss", CultureInfo.InvariantCulture)
 
             }).OrderBy(p=> p.criticidade);
             return Ok(riscosReturn);
         }
+
+      
 
         //public ActionResult<IEnumerable<Risco>> GetRiscos()
         //{
