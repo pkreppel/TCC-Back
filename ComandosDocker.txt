@@ -1,0 +1,26 @@
+--Trocar no webpack.config o caminho mudando a porta localhost para 20001
+--dentro da pasta tcc-front executar para montar o build
+--rodar npm run build para gerar os arquivos transpilados
+--depois executar o docker
+docker build -t tcc-frontend .
+
+--rodar o docker compose nas pasta repos
+docker-compose up -d
+
+--Conferencias-----------------------------
+
+--verifica a imagem nginx com frontend
+docker images tcc-frontend
+--verifica a rede montada
+docker network ls
+--verifica imagem backend aspnect core alpine
+docker images tcc-backend
+
+--verifica os containers criados nas portas 20000 e 200001
+docker-compose ps
+
+
+--Remove tudo o que foi criado no docker-compose
+docker-compose down
+--Remover uma imagem
+docker rmi image
