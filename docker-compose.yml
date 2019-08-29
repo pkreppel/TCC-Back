@@ -4,20 +4,54 @@ services:
   tccfront:
     container_name: tcc-frontend
     image: tcc-frontend
-    depends_on:
-      - tccback
+    build:
+      context: ../TCC-Front
     ports:
       - "20000:80"
     networks:
       - tcc-network
 
-  tccback:
-    container_name: tcc-backend
-    image: tcc-backend
+  proxy:
+    container_name: tcc-proxy
+    image: tccback-nginx
     build:
-      context: ./TCC-Back
+      context: ./Nginx
     ports:
       - "20001:80"
+    depends_on:
+      - tccback01
+      - tccback02
+      - tccback03
+    networks:
+      - tcc-network
+  
+  tccback01:
+    container_name: tcc-backend01
+    image: tcc-backend
+    build:
+      context: .
+    ports:
+      - "20002:80"
+    networks:
+      - tcc-network
+  
+  tccback02:
+    container_name: tcc-backend02
+    image: tcc-backend
+    ports:
+      - "20003:80"
+    depends_on:
+      - tccback01
+    networks:
+      - tcc-network
+  
+  tccback03:
+    container_name: tcc-backend03
+    image: tcc-backend
+    ports:
+      - "20004:80"
+    depends_on:
+      - tccback01
     networks:
       - tcc-network
 
