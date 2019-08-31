@@ -78,6 +78,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<SensoresBarragem>> PostSensoresBarragem(SensoresBarragem sensoresBarragem)
         {
+            sensoresBarragem.HoraMonitoramento = DateTime.UtcNow;
             _context.SensoresBarragem.Add(sensoresBarragem);
             await _context.SaveChangesAsync();
 
